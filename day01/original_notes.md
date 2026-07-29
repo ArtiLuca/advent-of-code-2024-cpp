@@ -31,7 +31,7 @@ In Part 2, we learn that we are no longer interested in the minimum values, but 
 ### Idea
 In Part 2, we can explore two approaches for solving the problem. The first approach uses the sorted lists from Part 1 and implements an iterative binary search, while the second approach completely ignores the sorting phase and uses a hash map. I decided to look at both approaches, since the binary search approach is the one I am most familiar with, while the hashing approach uses concepts that are "newer" to me and also proves to be more efficient.
 
-**1. Binary Search Approach**
+### (1) Binary Search Approach
 For this approach, we need both lists to be sorted in increasing order so that any duplicate numbers in the right list are grouped together in a contiguous block. Then, for each number in the left list, we can find its exact frequency in the right list by implementing a slightly modified binary search to find the boundaries of that block. To do this, we use two helpers: one for finding the position of the very first occurrence of the target number on the left, and another for finding the very last position of the target number on the right. We can then subtract the first position from the last position and add 1 to find the exact frequency.
 
 ### Pseudocode (Binary Search)
@@ -89,7 +89,7 @@ solvePart2_BinarySearch(L, R)
     return total        
 ```
 
-**2. Hash Map Approach**
+### (2) Hash Map Approach
 For this approach, we store key-value pairs (for example, using `std::unordered_map`) and can completely ignore the sorting phase. Instead of sorting, we do a single pass over the right list, using every number we find as the "key" and incrementing its "value" (the count) by 1. Once we have built the full map, we can use it as a frequency dictionary to look up each number in the left list. If a number in the left list exists in the dictionary, we multiply it by its stored frequency and add it to the total.
 
 ### Pseudocode (Hash Map)
