@@ -35,4 +35,4 @@ dayXX/
 
 I completed Days 1–9 of Advent of Code 2025 as a focused C++ and algorithms practice project [Advent of Code 2025](https://github.com/ArtiLuca/advent-of-code-2025-cpp).
 
-After Day 9, the puzzles became significantly more complex, so I decided to pause that year continue practicing with here with Advent of Code 2024. 
+After Day 9, the puzzles became significantly more complex, so I decided to pause that year and continue practicing here with Advent of Code 2024.
