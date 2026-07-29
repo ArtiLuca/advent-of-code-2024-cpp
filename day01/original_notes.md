@@ -1,7 +1,7 @@
 # Advent of Code 2024 - Day 1: Historian Hysteria
 
 ## Part 1
-In Part 1, we are given two lists of unique IDs. Our goal is to repeatedly find the smallest-value IDs from both lists and calculate their distance (i.e., how far apart they are). We then must sum up all of these distances to get the solution for Part 1.
+In Part 1, we are given two lists of location IDs. Our goal is to repeatedly find the smallest-value IDs from both lists and calculate their distance (i.e., how far apart they are). We then must sum up all of these distances to get the solution for Part 1.
 
 ### Idea
 Since we are extracting the smallest-value pairs of IDs from both lists at each step, we can first sort both lists in increasing order. That way, we can perform a single linear scan that calculates the distance for each pair using the absolute value of their difference, while summing them up to get Part 1's solution. For the actual implementation, we simply use `std::sort` for sorting.
