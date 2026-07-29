@@ -37,7 +37,7 @@ For this approach, we need both lists to be sorted in increasing order so that a
 **2. Hash Map**
 For this approach, we store key-value pairs (for example, using `std::unordered_map`) and can completely ignore the sorting phase. Instead of sorting, we do a single pass over the right list, using every number we find as the "key" and incrementing its "value" (the count) by 1. Once we have built the full map, we can use it as a frequency dictionary to look up each number in the left list. If a number in the left list exists in the dictionary, we multiply it by its stored frequency and add it to the total.
 
-### Pseudocode
+### Pseudocode (Binary Search)
 
 ```text
 findFirst(R, num)
@@ -90,7 +90,11 @@ solvePart2_BinarySearch(L, R)
             total = total + (num * frequency)
 
     return total        
+```
 
+### Pseudocode (Hash Map)
+
+```text
 solvePart2_HashMap(L, R)
     create new frequencyMap as empty Hash Map
     total = 0
