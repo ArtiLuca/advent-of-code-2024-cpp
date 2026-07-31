@@ -23,8 +23,7 @@ Each completed day has its own directory:
 
 ```text
 dayXX/
-├── README.md          final cleaned explanation
-├── original_notes.md  original write-up / first reasoning notes
+├── README.md          personal explanation/reasoning notes
 ├── main.cpp
 ├── dayXX.cpp
 ├── dayXX.h
