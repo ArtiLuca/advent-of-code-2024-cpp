@@ -125,3 +125,22 @@ Sorting both arrays initially takes $\Theta(N \log N)$ time. Then, for each of t
 
 **If we use a hash map approach:**
 Building the frequency dictionary requires iterating through the right list of size $N$ once. Inserting into a hash map takes $O(1)$ time on average, making this step $O(N)$. Calculating the scores requires iterating through the left list of size $N$ once, with hash map lookups also taking $O(1)$ time on average. This brings the overall time complexity down to strictly $O(N)$. However, because we must allocate a new data structure to store the unique numbers and their counts, the space complexity increases to $O(N)$ in the worst-case scenario (e.g., if all numbers in the right list are unique).
+
+## Files
+
+- `main.cpp` — reads the input file and prints both answers
+- `day05.h` — declarations for `ChiefHistorian` and both binary search and hash map approaches for Part 1   
+- `day05.cpp` — input parsing, sorting and summing distances, binary search and hash map approaches for finding frequencies, and solution logic
+
+## Build
+
+```bash
+g++ -std=c++20 -Wall -Wextra -Wpedantic main.cpp day01.cpp -o day01
+```
+
+## Run
+
+```bash
+./day01
+```
+
