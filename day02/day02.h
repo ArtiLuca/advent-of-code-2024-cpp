@@ -1,6 +1,4 @@
 #pragma once
-#ifndef RED_NOSED_REPORTS_H
-#define RED_NOSED_REPORTS_H
 
 #include <string>
 #include <vector>
@@ -34,5 +32,3 @@ private:
     std::string puzzleInput;
     std::vector<Report> reports;
 };
-
-#endif // RED_NOSED_REPORTS_H
