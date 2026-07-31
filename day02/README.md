@@ -154,3 +154,23 @@ solvePart2(A)
 
 * **Space Complexity:** `O(n × d)` for storing all reports read from the input.  
   During each simulated removal, the algorithm also creates a temporary copy of one report, which costs `O(d)` auxiliary space.
+
+
+## Files
+
+- `main.cpp` — reads the input file and prints both answers
+- `day05.h` — declarations for `Report` and 'RedNosedReports'
+- `day05.cpp` — input parsing, report validation, validation applying problem dampener, and solution logic
+
+## Build
+
+```bash
+g++ -std=c++20 -Wall -Wextra -Wpedantic main.cpp day02.cpp -o day02
+```
+
+## Run
+
+```bash
+./day02
+```
+
