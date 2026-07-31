@@ -159,7 +159,7 @@ solvePart2(A)
 ## Files
 
 - `main.cpp` — reads the input file and prints both answers
-- `day05.h` — declarations for `Report` and `RedNosedReports`
+- `day05.h` — declarations for `Report` and `RedNosedReports`   
 - `day05.cpp` — input parsing, report validation, validation applying problem dampener, and solution logic
 
 ## Build
