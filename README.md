@@ -23,11 +23,11 @@ Each completed day has its own directory:
 
 ```text
 dayXX/
-├── README.md          personal explanation/reasoning notes
+├── README.md          explanation/reasoning notes
 ├── main.cpp
 ├── dayXX.cpp
 ├── dayXX.h
-└── input.txt          not included
+└── input.txt          not included (as requested by AoC)
 ```
 
 ## Status
