@@ -158,9 +158,9 @@ solvePart2(A)
 
 ## Files
 
-- `main.cpp` — reads the input file and prints both answers
-- `day05.h` — declarations for `Report` and `RedNosedReports`   
-- `day05.cpp` — input parsing, report validation, validation applying problem dampener, and solution logic
+- `main.cpp` — creates the `RedNosedReports` solver, reads the input file, and prints both answers
+- `day02.h` — declares the `Report` struct and the `RedNosedReports` class
+- `day02.cpp` — handles input parsing, report validation for Part 1, the Problem Dampener check for Part 2, and the final counting logic
 
 ## Build
 
