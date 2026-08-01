@@ -14,7 +14,7 @@ solvePart1(L, R)
     sort L in increasing order
     sort R in increasing order
     total = 0
-    for i = 0 to N
+    for i = 0 to N - 1
         total = total + |L[i] - R[i]|
 
     return total    
@@ -33,7 +33,7 @@ In Part 2, we can explore two approaches for solving the problem. The first appr
 
 ### (1) Binary Search Approach  
 
-For this approach, we need both lists to be sorted in increasing order so that any duplicate numbers in the right list are grouped together in a contiguous block. Then, for each number in the left list, we can find its exact frequency in the right list by implementing a slightly modified binary search to find the boundaries of that block. To do this, we use two helpers: one for finding the position of the very first occurrence of the target number on the left, and another for finding the very last position of the target number on the right. We can then subtract the first position from the last position and add 1 to find the exact frequency.
+For this approach, we only need the right list to be sorted in increasing order, so that any duplicate numbers in the right list are grouped together in a contiguous block. Then, for each number in the left list, we can find its exact frequency in the right list by implementing a slightly modified binary search to find the boundaries of that block. To do this, we use two helpers: one for finding the position of the very first occurrence of the target number on the left, and another for finding the very last position of the target number on the right. We can then subtract the first position from the last position and add 1 to find the exact frequency.
 
 ### Pseudocode (Binary Search)
 
@@ -128,9 +128,9 @@ Building the frequency dictionary requires iterating through the right list of s
 
 ## Files
 
-- `main.cpp` — reads the input file and prints both answers
-- `day05.h` — declarations for `ChiefHistorian` and both binary search and hash map approaches for Part 1   
-- `day05.cpp` — input parsing, sorting and summing distances, binary search and hash map approaches for finding frequencies, and solution logic
+- `main.cpp` — creates the `ChiefHistorian` solver, reads the input file, and prints both answers
+- `day01.h` — declares the `ChiefHistorian` class and the helper methods used for the binary search and hash map approaches
+- `day01.cpp` — handles input parsing, Part 1 sorting and distance calculation, and both Part 2 implementations
 
 ## Build
 
