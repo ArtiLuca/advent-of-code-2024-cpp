@@ -120,7 +120,9 @@ In the parsing/setup phase we process `R` rules sequentially, and inserting elem
 During the validation phase, for each of the `L` updates we use a nested loop to check all pairs of pages.
 
 A sequence of length `P` produces  
+
 $\frac{P(P - 1)}{2}$  
+
 unique pairs, and looking up each pair in our rule map has an average cost of `O(1)`.
 
 In the worst case, where an update is completely valid, we perform `O(P²)` operations in total per update sequence.
