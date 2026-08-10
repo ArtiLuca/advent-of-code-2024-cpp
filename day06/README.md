@@ -207,3 +207,29 @@ solvePart2(G, initialGuard)
 ## Complexity
 The *Time Complexity* is $\mathcal{O}(V \times (R \times C))$, where $V$ is the total number of distinct positions visited by the guard in Part 1. In the absolute worst case, $V$ can scale up towards the maximum area limit of the map, $\mathcal{O}(R \times C)$, pushing the aggregate upper bound of the simulation routine to $\mathcal{O}((R \times C)^2)$.
 The *Space Complexity* is $\mathcal{O}(R \times C)$ to maintain the original map allocation alongside our flat $R \times C \times 4$ boolean state array allocated just once for loop detection.
+
+---
+
+## Build  
+
+*Note: We use the `-O3` optimization flag to tell the `g++` compiler to apply its highest level of performance tuning. Because Part 2 relies on running a brute-force simulation thousands of times, this flag drastically reduces the total execution time by aggressively optimizing loops, inlining functions, and streamlining memory access.*
+
+```bash
+g++ -std=c++20 -O3 -Wall -Wextra -pedantic main.cpp day06.cpp -o day06
+```
+
+## Run
+
+```bash
+./day06
+```
+
+The program expects the puzzle input in a file named `input.txt`.
+
+---
+
+## Files
+
+- `main.cpp` — creates the Patrol solver, reads the input file, and prints both answers
+- `day06.h` — declares the Guard struct, the Patrol class, and direction constants
+- `day06.cpp` — handles input parsing, the Part 1 patrol route simulation, and the optimized 1D array state-tracking for Part 2's loop detection
